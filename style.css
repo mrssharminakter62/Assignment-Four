@@ -131,3 +131,26 @@ nav ul li a:hover, a.active{
     font-size: 25px;
     cursor: pointer;
   }
+  #login-area{
+      display: none;
+  }
+  .form-style{
+      display: grid;
+        background-color: #fff;
+        border: 1px solid #ddd;
+        padding: 25px;
+        border-radius: 5px;
+        float: left;
+        margin-left: 200px ;
+
+    }
+  .style{
+      align-items: center;
+      align-items: left;
+      margin: 20px 0;
+      padding-left: 10px;
+      text-align: left;
+      font-size: 20px;
+  }
+  
+ 
