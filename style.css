@@ -129,4 +129,5 @@ nav ul li a:hover, a.active{
     text-decoration: none;
     display: inline-block;
     font-size: 25px;
+    cursor: pointer;
   }
