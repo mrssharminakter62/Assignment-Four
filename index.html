@@ -30,7 +30,7 @@
     <section id="bookNow-area">
 
     <!--Booking Section-->
-    <main class="main-content container">
+    <main class="main-content container" id="top">
         <div class="booking-form">
             <h3>Booking Flights</h3>
             <div class="input-group">
@@ -53,7 +53,7 @@
             </div>
             <div class="input-group f-class">
                 <div>
-                    <label for="">First Class <span id="firstclass-total">($150)</span> </label>
+                    <label for="">First Class($150)per--<span id="firstclass-total">$150</span> </label>
                     <input id="firstclass-count" class="inp-style inp-width" type="number" name="" value="0">
                 </div>
                 <div class="plus-minus-btn">
@@ -63,7 +63,7 @@
             
             <div class="input-group f-class">
                 <div>
-                    <label for="">Economy <span id="economy-total">($100)</span> </label>
+                    <label for="">Economy ($100)per-- <span id="economy-total">$100</span> </label>
                     <input id="economy-count" class="inp-style inp-width" type="number" name="" value="0">
                 </div>
                 <div class="plus-minus-btn">
@@ -110,27 +110,24 @@
         <div class="form-style">
         <form>
             <div class="style">
-              <label for="inputEmail4" class="">Email</label>
+              <label for="inputEmail4" class="">Email :</label>
               <input type="email" class="" id="inputEmail4">
             </div>
             <div class="style">
-              <label for="inputPassword4" class="">Password</label>
+              <label for="inputPassword4" class="">Password :</label>
               <input type="password" class="" id="inputPassword4">
             </div>
             <div class="style">
-              <label for="inputAddress" class="">Address</label>
+              <label for="inputAddress" class="">Address :</label>
               <input type="text" class="" id="inputAddress" placeholder="1234 Main St">
             </div>
             <div class="style">
-              <label for="inputAddress2" class="">Address 2</label>
-              <input type="text" class="" id="inputAddress2" placeholder="Apartment, studio, or floor">
+              <label for="inputAddress2" class="">City :</label>
+              <input type="text" class="" id="inputAddress2" placeholder="Dhaka, Apartment, or floor">
             </div>
+           
             <div class="style">
-              <label for="inputCity" class="form-label">City</label>
-              <input type="text" class="" id="inputCity">
-            </div>
-            <div class="style">
-              <label for="inputState" class="">State</label>
+              <label for="inputState" class="">State :</label>
               <select id="inputState" class="">
                 <option selected>Europe</option>
                 <option>Africa</option>
@@ -140,7 +137,7 @@
               </select>
             </div>
             <div class="style">
-              <label for="inputZip" class="form-label">Zip</label>
+              <label for="inputZip" class="form-label">Zip :</label>
               <input type="text" class="form-control" id="inputZip">
             </div>
             <div class="style">
@@ -154,9 +151,9 @@
             <div class="style">
               <button type="submit" class="btn-style">Sign in</button>
             </div>
-          </form>
+          </form> 
         </div>
-
+       
     </section>
     <script>
 
@@ -184,7 +181,9 @@
 
         calculateTotal();
     }
-    
+
+    // Total ticket price -------------------------area
+
     function calculateTotal(){
 
         const firstClass = getInputvalue('firstclass');
@@ -200,7 +199,7 @@
     document.getElementById('total').innerText = '$' + total;
 
 }
-
+    // ticketCount function------------------------------------------------
 
     function getInputvalue(ticket) {
         const ticketInput = document.getElementById(ticket + '-count');
@@ -208,13 +207,14 @@
         return ticketCount;
     }
 
-    // Transfar  Book Now to Login-----------------------------------
-
+    // Transfer  Book Now to Login-----------------------------------
+    //  Event hadler add----------------------------------
 
     const bookNowBtn = document.getElementById("book-now");
     bookNowBtn.addEventListener("click", function(){
         const  bookNowArea = document.getElementById("bookNow-area");
         bookNowArea.style.display = "none";
+    
         const  loginArea = document.getElementById("login-area");
         loginArea.style.display = "block";
     })
